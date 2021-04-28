@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %}
+        Welcome!
+      {% endblock %}
+    </title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+      {# {{ encore_entry_link_tags('app') }} #}
+    {% endblock %}
+
+    {% block javascripts %}
+      {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+
+    <link rel="stylesheet"
+      href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet"
+      href="/assets/css/bootstrap.min.css"
+      type="text/css" />
+    <link rel="stylesheet"
+      href="/assets/css/font-awesome.min.css"
+      type="text/css" />
+    <link rel="stylesheet" href="/assets/css/nice-select.css" type="text/css" />
+    <link rel="stylesheet"
+      href="/assets/css/magnific-popup.css"
+      type="text/css" />
+    <link rel="stylesheet"
+      href="/assets/css/jquery-ui.min.css"
+      type="text/css" />
+    <link rel="stylesheet"
+      href="/assets/css/owl.carousel.min.css"
+      type="text/css" />
+    <link rel="stylesheet"
+      href="/assets/css/slicknav.min.css"
+      type="text/css" />
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  </head>
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+      <div class="offcanvas__search">
+        <i class="fa fa-search search-switch"></i>
+      </div>
+      <div class="offcanvas__logo">
+        <a href="{{ path('home') }}">
+          <img src="/assets/img/logo.png" alt="" />
+        </a>
+      </div>
+      <nav class="offcanvas__menu mobile-menu">
+        <ul>
+          <li><a href="{{ path('home') }}">Home</a></li>
+          <li><a href="{{ path('cours') }}">Cours</a></li>
+          <li><a href="{{ path('moniteur') }}">Moniteurs</a></li>
+          <li><a href="{{ path('temoignages') }}">Temoignage</a></li>
+          <li><a href="{{ path('contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-menu-wrap"></div>
+      <div class="offcanvas__social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+      </div>
+      <div class="offcanvas__btn">
+        <a href="{{ path('inscription') }}" class="primary-btn">Inscription</a>
+      </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html">
+                <img src="/assets/img/logo.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <nav class="header__menu">
+              <ul>
+                <li><a href="{{ path('home') }}">Home</a></li>
+                <li><a href="{{ path('cours') }}">Cours</a></li>
+                <li><a href="{{ path('moniteur') }}">Moniteurs</a></li>
+                <li><a href="{{ path('temoignages') }}">Temoignage</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <div class="header__right">
+              <div class="header__right__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+              </div>
+              <div class="header__right__btn">
+                <a href="{{ path('connexion') }}" class="primary-btn">
+                  Connexion
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="canvas__open">
+          <span class="fa fa-bars"></span>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+    {% block body %}
+
+    {% endblock %}
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-2 col-sm-6">
+            <div class="footer__widget">
+              <h5>
+                COMPANY
+              </h5>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Press & Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Faq</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="footer__widget">
+              <h5>
+                Courses
+              </h5>
+              <ul>
+                <li><a href="#">Winter driving</a></li>
+                <li><a href="#">Program for seniors</a></li>
+                <li><a href="#">Adult in car lesons</a></li>
+                <li><a href="#">Defensive driving</a></li>
+                <li><a href="#">Stick shit lessons</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="footer__widget">
+              <h5>
+                USEFUL LINKS
+              </h5>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Drupal Themes</a></li>
+                <li><a href="#">WordPress Themes</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="footer__about">
+              <div class="footer__logo">
+                <a href="#"><img src="/assets/img/footer-logo.png" alt="" /></a>
+              </div>
+              <p>
+                Address : 15 Division Street, New York, NY 12032, United States
+                of America
+              </p>
+              <ul>
+                <li>Phone : +0228 (123) 70185305</li>
+                <li>Email : kibalomaturin@gmail.com</li>
+                <li>Fax : +8 (123) 456 789</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div class="footer__copyright__text">
+              <p>
+                Copyright &copy;<script>
+                  document.write(new Date().getFullYear());
+                </script>All rights reserved | This template is made with <i class="fa fa-heart"
+                  aria-hidden="true">
+
+                </i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              </p>
+            </div>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+      <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">
+          +
+        </div>
+        <form class="search-model-form">
+          <input type="text" id="search-input" placeholder="Search here....." />
+        </form>
+      </div>
+    </div>
+    <!-- Search End -->
+    <!-- Js Plugins -->
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.nice-select.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/jquery.slicknav.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
